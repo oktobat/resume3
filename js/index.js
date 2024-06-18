@@ -19,9 +19,6 @@ $(window).on('scroll', function(){
     let sct = $(this).scrollLeft()
     // console.log(sct)
 
-    frameIndex = (frameIndex + 1) % totalFrames;
-    $('.sprite .simgbox').css('transform', `translateX(${-frameIndex * 340}px)`);
-
     if ( sct>=sectArray[0] && sct<sectArray[1] && !cflag) {
         $('#menu li').eq(0).addClass('on')
         $('#menu li').eq(0).siblings().removeClass('on')
@@ -217,3 +214,5 @@ $(document).on('click', '.outLayer button, .outLayer', function(){
 $(document).on('click', '.inLayer', function(e){
     e.stopPropagation()
 })
+
+
