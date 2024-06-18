@@ -185,3 +185,31 @@ body { font:12px/1.6 arial; color:#555; }
 #sect4 button[type=submit] { background-color:red }
 #sect4 button[type=reset] { background-color:blue }
 
+.sprite {
+    position:absolute;
+    left: 0; 
+    bottom: 30px;
+    width:340.1666px;
+    height:501px; 
+    background:url('../img/sprite.png') no-repeat;
+    background-size: cover;
+    z-index:999999;
+    animation:play 1.2s steps(6) infinite, walk 40s linear infinite;
+}
+
+@keyframes play {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -2041px 0; 
+    }
+}
+@keyframes walk {
+    from {
+        left: 0; 
+    }
+    to {
+        left: 100%; 
+    }
+}
